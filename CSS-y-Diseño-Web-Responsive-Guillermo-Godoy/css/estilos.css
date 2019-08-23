@@ -2,6 +2,7 @@ html, body{
 color: white;
 background-color: black;
 text-align: center;
+font-family: "Dancing Script"
 }
 
 .Contenido{
@@ -22,7 +23,15 @@ text-shadow: 2px 2px #02010a;
 }
 
 header nav{
-margin: auto;
+  margin: auto;
+}
+
+header nav a{
+  color: inherit;
+}
+
+.visitado{
+  text-decoration: none;
 }
 
 .imgPrincipal{
@@ -30,10 +39,12 @@ margin: auto;
   background-color: #82c3a6;
   display: flex;
   flex-direction: column;
+
 }
 
 .imgPrincipal figure img{
   width: 100%;
+  box-shadow: 2px 2px #02010a;
 }
 
 .imgSecundaria{
@@ -41,9 +52,55 @@ margin: auto;
   background-color: #d5c75f;
   display: flex;
   flex-direction: row;
+  padding: auto;
+  width: 100%;
+
 }
 
-.imgSecundaria figure img {
+.imgSecundaria img{
+  display: flex;
+  flex-direction: row;
+  border: 1px black solid;
+  padding: auto;
   width: 100%;
   height: 100%;
+  box-shadow: 2px 2px #02010a;
+}
+
+
+.ld-izq, .ld-der {
+ width: 50%;
+ padding: 30px;
+}
+
+.imgSecundaria a {
+ color: black;
+ text-decoration: underline;
+ }
+
+.PieDePagina footer{
+margin: auto;
+background-color: #C6d5c5;
+display: flex;
+flex-direction: row;
+weight: 100%;
+font-size: 1em;
+justify-content: space-around;
+padding: 10px;
+color: black
+}
+
+.PieDePagina ul{
+  list-style: none;
+  text-align: left;
+  margin: auto;
+  padding: 10px;
+}
+
+.ColumnasPie ul li a{
+  color: black;
+}
+
+.tituloslis{
+  font-size: 1.3em;
 }
