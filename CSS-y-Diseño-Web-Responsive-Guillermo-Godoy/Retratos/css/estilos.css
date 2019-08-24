@@ -34,49 +34,26 @@ header nav a{
   text-decoration: none;
 }
 
-.imgPrincipal{
+.galeria{
   margin: auto;
-  background-color: #82c3a6;
-  display: flex;
-  flex-direction: column;
-
-}
-
-.imgPrincipal figure img{
-  width: 100%;
-  box-shadow: 2px 2px #02010a;
-}
-
-.imgSecundaria{
-  margin: auto;
-  background-color: #d5c75f;
   display: flex;
   flex-direction: row;
   padding: auto;
   width: 100%;
-
+  background-color: #d5c75f;
 }
 
-.imgSecundaria img{
-  display: flex;
-  flex-direction: column;
-  border: 1px black solid;
-  padding: auto;
-  width: 100%;
-  height: 100%;
-  box-shadow: 2px 2px #02010a;
+.galeria figure img{
+ height: 100%;
+ width: 100%;
+ padding: auto;
+ padding-top: 20px;
+ padding-bottom: 20px;
+ margin: auto;
+ display: flex;
+ flex-direction: row;
 }
 
-
-.ld-izq, .ld-der {
- width: 50%;
- padding: 30px;
-}
-
-.imgSecundaria a {
- color: black;
- text-decoration: underline;
- }
 
 .PieDePagina footer{
 margin: auto;
