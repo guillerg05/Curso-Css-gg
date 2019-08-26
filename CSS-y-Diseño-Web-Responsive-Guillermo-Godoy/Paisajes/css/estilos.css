@@ -2,7 +2,32 @@ html, body{
 color: white;
 background-color: black;
 text-align: center;
-font-family: "Dancing Script"
+font-family: "Dancing Script";
+}
+
+
+@keyframes cuerpo{
+0% {
+position: relative;
+margin-top: 150%;
+}
+60% {
+position: relative;
+margin-top: -5%;
+}
+100% {
+position: relative;
+margin-top: 0%;
+}
+}
+
+.cuerpo{
+animation-name: cuerpo;
+animation-duration: 1s;
+-webkit-animation-delay: 1s;
+-moz-animation-delay: 1s;
+-o-animation-delay: 1s;
+animation-delay: 1s;
 }
 
 .Contenido{
@@ -39,23 +64,35 @@ header nav a{
   display: flex;
   flex-direction: row;
   padding: auto;
-  width: 100%;
   background-color: #d5c75f;
 }
 
 .galeria figure img{
  height: 100%;
  width: 100%;
- padding: auto;
- padding-top: 20px;
- padding-bottom: 20px;
- margin: auto;
+ margin: 10px;
  display: flex;
  flex-direction: row;
+ -webkit-box-shadow: 2px 2px 2px #02010a;
+}
+
+.imgs1{
+-webkit-filter: blur(10px);
+filter: blur(10px);
+}
+
+.imgs2, .imgs4, .imgs6{
+-webkit-filter: grayscale(100%);
+filter:  grayscale(100%);
+}
+
+.imgs3{
+-webkit-filter: sepia(90%);
+filter: sepia(90%);
 }
 
 .PieDePagina footer{
-margin: auto;
+
 background-color: #C6d5c5;
 display: flex;
 flex-direction: row;
@@ -87,4 +124,44 @@ border-radius: 0 0 10px 10px;
   width: 1em;
   height: 1em;
   padding: auto;
+}
+
+
+
+@media (max-width:900px){
+header{
+display: flex;
+flex-direction: column;
+}
+.menu{
+padding-bottom: 5px;
+}
+}
+
+@media (max-width:900px){
+.galeria{
+display: flex;
+flex-direction: column;
+}
+}
+
+@media (max-width:900px){
+.colums{
+width: 95%;
+padding: 1%;
+}
+}
+
+@media (max-width:900px){
+.PieDePagina footer{
+display: flex;
+flex-direction: column;
+}
+}
+
+@media (max-width:900px){
+.Contenido{
+width: 100%;
+margin: 1%;
+}
 }

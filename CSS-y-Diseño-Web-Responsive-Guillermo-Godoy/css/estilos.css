@@ -5,6 +5,30 @@ text-align: center;
 font-family: "Dancing Script"
 }
 
+@keyframes cuerpo{
+0% {
+position: relative;
+margin-top: 150%;
+}
+60% {
+position: relative;
+margin-top: -5%;
+}
+100% {
+position: relative;
+margin-top: 0%;
+}
+}
+
+.cuerpo{
+animation-name: cuerpo;
+animation-duration: 1s;
+-webkit-animation-delay: 1s;
+-moz-animation-delay: 1s;
+-o-animation-delay: 1s;
+animation-delay: 1s;
+}
+
 .Contenido{
 width: 900px;
 margin: auto;
@@ -54,6 +78,8 @@ header nav a{
   flex-direction: row;
   padding: auto;
   width: 100%;
+  transition: rotate;
+
 
 }
 
@@ -73,6 +99,17 @@ header nav a{
  padding: 30px;
 }
 
+.ld-izq img:hover{
+  transform: rotate(10deg);
+  transition-duration: 2s;
+
+}
+
+.ld-der img:hover{
+  transform: translate(20px,-5px);
+  transition-duration: 1.5s;
+}
+
 .imgSecundaria a {
  color: black;
  text-decoration: underline;
@@ -83,7 +120,6 @@ margin: auto;
 background-color: #C6d5c5;
 display: flex;
 flex-direction: row;
-weight: 100%;
 font-size: 1em;
 justify-content: space-around;
 padding: 10px;
@@ -111,4 +147,46 @@ border-radius: 0 0 10px 10px;
   width: 1em;
   height: 1em;
   padding: auto;
+}
+
+@media (max-width:900px){
+header{
+display: flex;
+flex-direction: column;
+}
+.menu{
+padding-bottom: 5px;
+}
+}
+
+@media (max-width:900px){
+.imgSecundaria{
+
+display: flex;
+flex-direction: column;
+
+}
+}
+
+@media (max-width:900px){
+.ld-izq, .ld-der{
+width: 90%;
+margin: 1%;
+padding: 3%;
+}
+}
+
+
+@media (max-width:900px){
+.PieDePagina footer{
+display: flex;
+flex-direction: column;
+}
+}
+
+@media (max-width:900px){
+.Contenido{
+width: 100%;
+margin: 1px;
+}
 }
