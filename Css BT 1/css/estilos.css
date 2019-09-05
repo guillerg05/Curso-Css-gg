@@ -1,0 +1,50 @@
+.encabezado{
+  width: 80%;
+  background-color: #a2e920;
+  text-align: center;
+  margin: 2em auto;
+}
+
+body{
+  background-color: #bd9963;
+}
+
+.contenedor{
+  box-sizing: border-box;
+  width: 100%;
+  height: 100px;
+  text-align: center;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.galeria{
+  margin: 2em auto;
+  width: 80%;
+  display: flex;
+  flex-wrap: wrap;
+
+  }
+
+[class^="col"]{
+  background: rgb(164, 96, 6);
+  padding: 0.5vw;
+  margin: 0.4vw;
+  width: 30.3%;
+}
+
+[class^="cx"]{
+  width: 80%;
+  border: 4px solid violet;
+  margin: 0 auto;
+  padding: 0.6vw;
+  background-color: yellow;
+  min-width: 100px;
+  text-align: center;
+
+
+}
+
+
+
+}

@@ -1,0 +1,136 @@
+.cinema-body{
+  background: url(../img/Slamdunk.jpg);
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+
+
+.logo-img {
+  width: 100px;
+  height: 65px;
+}
+
+.jumbotron-img{
+  margin-top: 0px;
+}
+
+.redes-sociales img{
+  margin-top: 20px;
+  height: 40px;
+  width: 100px;
+}
+
+.titulo-text{
+  font-size: 18px;
+  weight: bolder;
+  color: white;
+  padding: 10px;
+}
+
+.img-social{
+  height: 40px;
+  width: 40px;
+}
+
+.navbar-inverse{
+  min-height: 10%;
+  background: orange;
+  border: none;
+}
+
+.container-fluid{
+  margin-top: 64px;
+}
+
+.jumbotron-text{
+  font-size: 16px;
+  color: white;
+  margin-top: 20px;
+}
+
+.jumbotron {
+  background: url(../img/bscap.jpg);
+  min-height: 500px;
+  border-radius: 0px !important;
+  margin-bottom: 0px;
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+
+.welcome-title{
+  color: white;
+  margin-right: 10px;
+}
+
+.titulo-cartelera{
+min-height: 45px;
+background: orange;
+opacity: 0.95;
+}
+
+.movies-row {
+background:  rgba(100, 75, 94, 0.8);
+min-height: 350px;
+padding-right: 15px;
+padding-left: 15px;
+}
+
+.img-movies{
+height: 260px;
+padding: 6px;
+margin-top: 22px;
+width: 100%;
+}
+
+.movie-title{
+  color: blue;
+
+}
+
+.services-text, .dl-horizontal{
+  color: white;
+}
+
+.movies-column{
+  margin-top: 5px;
+  background: lightgreen;
+  min-height: 330px;
+  border: 1px dashed blue;
+}
+
+.left-column {
+  border-right: 1px dashed blue;
+}
+
+@media (max-width:770px) {
+  .right-column{
+    display: none;
+  }
+  .movies-row {
+      min-height: 250px;
+    }
+
+  .movies-column {
+      min-height: 230px;
+    }
+
+  .jumbotron {
+      min-height: 400px;
+    }
+  .h2{
+    font-size: 22px;
+    }
+  .titulo-cartelera {
+    font-size: 15px;
+  }
+  .jumbotron-img{
+    margin-top: 20px;
+  }
+
+}
