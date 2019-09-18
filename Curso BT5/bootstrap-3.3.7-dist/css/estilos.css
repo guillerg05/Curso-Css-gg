@@ -1,0 +1,183 @@
+.cinema-body{
+  background: url(../img/Slamdunk.jpg);
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+
+.user_data{
+  margin-top: 10px;
+  font-size: 18px;
+  color: white;
+}
+.label-class{
+  color: white;
+  opacity: 0.60;
+  font-size: 13px;
+  margin-right: 10px;
+}
+
+.btn-save{
+  width: 40%;
+  background: orange;
+  opacity: 0.95;
+  color: white;
+}
+
+.input-element{
+  width: 100%;
+  height: 28px;
+  padding: 10px;
+  color: white;
+  background: white;
+  opacity: 0.4;
+  border-radius: 4px;
+  border: none;
+  margin-top: 5px;
+}
+
+.logo-img {
+  width: 100px;
+  height: 65px;
+}
+
+.jumbotron-img{
+  margin-top: 0px;
+}
+
+.redes-sociales img{
+  margin-top: 20px;
+  height: 40px;
+  width: 100px;
+}
+
+.titulo-text{
+  font-size: 18px;
+  weight: bolder;
+  color: white;
+  padding: 10px;
+}
+
+.img-social{
+  height: 40px;
+  width: 40px;
+}
+
+.navbar-inverse{
+  min-height: 10%;
+  background: orange;
+  border: none;
+}
+
+.container-fluid{
+  margin-top: 64px;
+}
+
+.jumbotron-text{
+  font-size: 16px;
+  color: white;
+  margin-top: 20px;
+}
+
+.jumbotron {
+  background: url(../img/bscap.jpg);
+  min-height: 500px;
+  border-radius: 0px !important;
+  margin-bottom: 0px;
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+
+.welcome-title{
+  color: white;
+  margin-right: 10px;
+}
+
+.titulo-cartelera{
+min-height: 45px;
+background: orange;
+opacity: 0.95;
+}
+
+.movies-row {
+background:  rgba(100, 75, 94, 0.8);
+min-height: 350px;
+padding-right: 15px;
+padding-left: 15px;
+}
+
+.img-movies{
+height: 260px;
+padding: 6px;
+margin-top: 22px;
+width: 100%;
+}
+
+.movie-title{
+  color: white;
+  text-align: center;
+
+}
+
+.services-text, .dl-horizontal{
+  color: white;
+}
+
+.movies-column{
+  margin-top: 5px;
+  background: lightgreen;
+  min-height: 330px;
+
+}
+
+.left-column {
+  border-right: 1px dashed blue;
+}
+
+@media (max-width:770px) {
+  .right-column{
+    display: none;
+  }
+
+  .titulo-text{
+    font-size: 15px;
+  }
+  .movies-row {
+    padding-left: 0px;
+    padding-right: 0px;
+    min-height: 400px;
+    }
+    .container-fluid{
+      margin-top: 60px;
+    }
+
+  .movies-column {
+      min-height: 230px;
+    }
+
+  .jumbotron {
+      min-height: 380px;
+    }
+  .h2{
+    font-size: 22px;
+    }
+  .titulo-cartelera {
+    font-size: 15px;
+  }
+  .jumbotron-img{
+    width: 150px;
+    margin-top: 20px;
+  }
+
+  .img-movies{
+    height: 133px;
+    padding: 6px;
+    margin-top: 22px;
+  }
+
+}
