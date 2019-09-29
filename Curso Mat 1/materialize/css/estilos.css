@@ -1,0 +1,13 @@
+.encabezadoprin{
+min-height: 4rem !important;
+}
+
+div[class*="colump"]{
+ min-height: 50rem !important;
+ border: 1px solid #eceff2;
+}
+
+div[class*="blockp"]{
+  min-height: 25rem !important;
+
+}
