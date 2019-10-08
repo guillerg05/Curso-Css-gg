@@ -1,9 +1,27 @@
 
-var uno = 9;
-var dos = 10;
+var uno = 5;
+var dos;
 
- document.write (uno == dos || dos==9);
- 
+  
+switch(uno){
+    case 0: dos="CERO"; break;
+    case 1: dos="UNO" ;break;
+    case 2: dos="DOS"; break;
+    case 3: dos="TRES";break;
+    case 4: dos="CUATRO";break;
+    case 5: dos="CINCO PRRO";break;
+    default: dos="NINGUNO PRRO"; break;
+}
+
+document.write(dos);
+
+
+
+
+
+
+
+
  /* Machetes
  <= menor igual que
  >= mayor igual que
@@ -16,5 +34,9 @@ var dos = 10;
  si lo que esta adentro NO ES VERDADERO te pone verdadero. Ej
  var uno = 19; var dos =19
  Document.write(!(uno==20)). en el navegador responde true
- 
+ a!="" que a no sea una cadena vacia
+
+ condicion ? TRUE : false;
  */
+
+

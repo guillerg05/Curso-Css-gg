@@ -1,5 +1,4 @@
-
- /* Machetes
+/* Machetes
  <= menor igual que
  >= mayor igual que
  == igualdad
@@ -11,5 +10,6 @@
  si lo que esta adentro NO ES VERDADERO te pone verdadero. Ej
  var uno = 19; var dos =19
  Document.write(!(uno==20)). en el navegador responde true
- 
+ a!="" que a no sea una cadena vacia
  */
+
