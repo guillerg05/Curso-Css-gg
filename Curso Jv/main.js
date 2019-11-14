@@ -1,8 +1,7 @@
-const number = 20
+let age = prompt('Dime tu edad');
 
-let numero= 10,
-    nombre = "Df. Go. y asociados",
-    empresa = "GoFuture",
-    edad, cargo, pais
+let isAdult = age >= 18
+            ? 'Eres mayor de edad'
+            :'Aun eres un pibe'
 
-    numero= 20
+alert(isAdult)

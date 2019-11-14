@@ -1,0 +1,81 @@
+.barra-superior{
+  min-height: 4rem;
+}
+div[class*="columna"]{
+  min-height: 50rem;
+}
+div[class*="bloque"]{
+  height: 25rem;
+  overflow: scroll;
+}
+
+.buscar-campo{
+float: left !important;
+margin-left: 1rem;
+margin-top: 0.5rem;
+width: 70%;
+}
+
+.bscolum{
+  margin-bottom: 0 !important;
+}
+.contenedor-botones{
+ margin-top: 1rem;
+}
+
+.encabezadoprin{
+min-height: 4rem !important;
+}
+
+div[class*="colump"]{
+ min-height: 50rem !important;
+}
+
+.columpg{
+border: 1px solid #eceff2;
+}
+
+div[class*="blockp"]{
+  min-height: 25rem !important;
+}
+
+.columpb, .columpcn {
+  padding: 0 !important;
+}
+
+.colum-newp {
+  min-height: 7rem !important;
+}
+
+.colum-nop{
+  min-height: 17rem !important;
+  padding: 2rem !important;
+}
+
+.logopj{
+margin: 0.5rem !important;
+height: 60px !important;
+width: 90px !important;
+}
+
+.cajapn{
+ margin-top: 1rem !important;
+ min-height: 50rem !important;
+ padding: 0.5rem !important;
+ border: 0px !important;
+ border-radius: 4px !important;
+ }
+
+.columpcc{
+padding: 2rem !important;
+padding-top: 1rem !important;
+}
+
+.responsive-img{
+  border: 0.6rem solid #ff8f00;
+  border-radius: 8px !important;
+}
+
+.columpn{
+  margin-top: 1rem !important;
+}
