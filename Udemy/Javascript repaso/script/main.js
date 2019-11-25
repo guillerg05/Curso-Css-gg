@@ -45,4 +45,38 @@ var nombres = ["Victor", "Antonio", "Joaco"]
 document.write("</h1>Listado de nombres</h1>" + "<br/>");
 
 nombres.forEach((nombre) =>
- {document.write(nombre + "<br/>");})
+ {document.write(nombre + "<br/>");
+})
+
+var coche = {
+    modelo: 'Mercedes Clase P',
+    maxima: 550,
+    antiguedad: 2020,
+    mostrarDatos(){
+        console.log(this.modelo, this.maxima, this.antiguedad);
+    },
+    propiedad1: "Valor aleatorio"
+}
+
+document.write("<h1>"+coche.antiguedad+"</h1>")
+coche.mostrarDatos()
+console.log(coche)
+
+var saludar = new Promise((resolve, reject) =>{
+    setTimeout(() => {
+        let saludo = "Uhola a todos!!! yo soy el leon!!"
+        saludo = false
+        if(saludo){
+            resolve(saludo);
+        }else{
+            reject("No hay saludo disponible")
+        }
+    }, 2000)
+})
+
+saludar.then(resultado =>{
+    alert(resultado)
+})
+.catch(err => {
+    alert(err)
+})

@@ -1,7 +1,16 @@
-let age = prompt('Dime tu edad');
+const saludar = (persona,sexo) => {
+    let saludo = sexo === 'm'
+               ? `Bienvenido`
+               : `Bienvenida`
+    return `${saludo} a EDteam, ${persona}`
+}
 
-let isAdult = age >= 18
-            ? 'Eres mayor de edad'
-            :'Aun eres un pibe'
+console.log(saludar('Adrian','m'))
+console.log(saludar('Pedro','m'))
+console.log(saludar('Adriana','Roberto'))
+console.log(saludar('Juan Domingo','m'))
 
-alert(isAdult)
+const sumar = (a,b) => a + b
+
+console.log(sumar(1,4))
+console.log(sumar(3,9))
