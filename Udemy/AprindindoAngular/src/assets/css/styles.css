@@ -96,8 +96,8 @@ body{
      
 }
 
-#menu a:hover{
-    color:  #fc332c;
+#menu a:hover, .active{
+    color:  #fc332c !important;
 }
 
 #slider{
