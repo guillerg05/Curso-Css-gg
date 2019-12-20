@@ -36,6 +36,14 @@
             <span class="date">
                 hace 5 minutos
             </span>
+
+            <span class="year" [ngClass]="{
+                                   'year-green': pelicula.year > 2016,
+                                   'year-red': pelicula.year < 2016
+                               }"
+                               >
+                {{pelicula.year}}
+            </span>
             <a href="#">Leer más</a>
 
             <div class="clearfix"></div>         

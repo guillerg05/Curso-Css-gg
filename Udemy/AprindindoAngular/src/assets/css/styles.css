@@ -100,6 +100,23 @@ body{
     color:  #fc332c !important;
 }
 
+.year-green{
+    display: block;
+    background: green;
+    color:white;
+    padding: 5px;
+    width: 121px;
+    text-align: center;
+}
+.year-red{
+    display: block;
+    background: red;
+    color:white;
+    padding: 5px;
+    width: 121px;
+    text-align: center;
+}
+
 #slider{
     background: #61dafb;
     width: 100%;
