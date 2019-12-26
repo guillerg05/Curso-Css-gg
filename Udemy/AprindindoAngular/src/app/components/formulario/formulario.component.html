@@ -1,12 +1,78 @@
-<app-slider
- [nombre]="'Formulario'"
- [size]="'small'"
-
-></app-slider>
+<app-slider [nombre]="'Formulario'" [size]="'small'"></app-slider>
 
 <div class="center">
     <section id="content">
         <h1 class="subheader">Formularios</h1>
+    <!--    
+        <div class="datos-al-vuelo" *ngIf="user.nombre">
+            <h2 class="subheader">Datos al vuelo</h2>
+            <ul>
+                <li>
+                    {{user.nombre}}
+                </li>
+               
+                <li>
+                    {{user.apellidos}}
+                </li>
+              
+                <li>
+                    {{user.bio}}
+                </li>
+
+                <li>
+                    {{user.genero}}                    
+                </li>
+            </ul>
+      
+        </div>
+          -->
+
+        <form class="mid-form" #userForm="ngForm" (ngSubmit)="onSubmit()">
+            <div class="form-group">
+                <label for="nombre">Nombre</label>
+                <input type="text" name="nombre" #nombre="ngModel" [(ngModel)]="user.nombre" required pattern="[a-zA-Z]+" />
+                
+                <small style="color: red" *ngIf="!nombre.valid && nombre.touched">
+                    El nombre no es válido
+                </small>
+            </div>
+
+            <div class="form-group">
+                <label for="apellidos">Apellidos</label>
+                <input type="text" name="apellido" #apellidos="ngModel" [(ngModel)]="user.apellidos" required />
+
+                <small style="color: red" *ngIf="!apellidos.valid && apellidos.touched">
+                    Los apellidos no son válido
+                </small>
+            </div>
+
+            <div class="form-group">
+                <label for="bio">Biografía</label>
+                <textarea name="bio" #bio="ngModel" [(ngModel)]="user.bio" required ></textarea>
+            
+                <small style="color: red" *ngIf="!bio.valid && bio.touched">
+                    La Biografía no es válida
+                </small>
+            </div>
+
+            <div class="form-group radibuttons">
+                <input type="radio" name="genero" value="hombre" #genero="ngModel" [(ngModel)]="user.genero" required />Hombre
+                <input type="radio" name="genero" value="mujer"  #genero="ngModel" [(ngModel)]="user.genero" />Mujer
+                <input type="radio" name="genero" value="otro" #genero="ngModel" [(ngModel)]="user.genero" />Otre
+           
+                <small style="color: red" *ngIf="!genero.valid && genero.touched">
+                    Debe marcar el génere
+                </small>
+            </div>
+            <div class="clearfix"></div>
+
+            <input type="submit" value="Enviar" class="btn" [disabled]="userForm.invalid" />
+        </form>
+        <h2 class="subheader">Eventos</h2>
+        <button (click)="hasDadoClick()">Dale Click</button>
+        <input type="text" [(ngModel)]="campo" (keyup.enter)="hasSalido()" />
+        {{campo}}
+
     </section>
 
     <app-sidebar></app-sidebar>
