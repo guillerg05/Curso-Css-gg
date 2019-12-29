@@ -1,4 +1,4 @@
- 
+export class Pelicula{  
  /*  
     public title: string;
     public year: number;
@@ -10,7 +10,7 @@
         this.image = image;
     }
 */
-export class Pelicula{ 
+
     constructor(
         public title: string,
         public year: number,

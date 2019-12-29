@@ -3,7 +3,7 @@
 //Cargar modulos de node para crear servidor
 
 var express = require('express');
-var bodyParser = require ('body-parser');
+var bodyParser = require('body-parser');
 
 //Ejecutar express (http)
 
@@ -28,7 +28,7 @@ app.use((req, res, next) => {
 });
 // Añadir prefijos a rutas/cargar rutas
 
-app.use( '/api',article_routes);
+app.use( '/api', article_routes);
 
 // Exportar modulo (fichero actual)
 

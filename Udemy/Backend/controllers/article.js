@@ -4,7 +4,7 @@ var validator = require('validator');
 var fs = require('fs');
 var path = require('path');
 
-var article = require('../models/article');
+var Article = require('../models/article');
 
 var controller = {
 
@@ -52,10 +52,15 @@ var controller = {
         
         article.title = params.title;
         article.content = params.content;
-        article.image = null;
+
+        if(params.image){
+            article.image = params.image;
+        }else{
+            article.image = null;
+        }
 
         //Guardar el articulo
-        article.save((err, articleStored) =>{
+        article.save((err, articleStored) => {
             if(err || !articleStored){
                 return res.status(404).send({
                     status: 'error',
@@ -126,7 +131,7 @@ var controller = {
         }
 
         // Buscar el articulo
-        Article.findById(articleId, (err,article) => {
+        Article.findById(articleId, (err, article) => {
            
             if(err || !article){
                 return res.status(404).send({
@@ -198,7 +203,7 @@ var controller = {
         var articleId = req.params.id;
 
         // Find and delete
-        Article.findOneAndDelete({_id: articleId},(err, articleRemoved) =>{
+        Article.findOneAndDelete({_id: articleId}, (err, articleRemoved) =>{
             if(err){
                 return res.status(500).send({
                     status: 'error',
@@ -261,6 +266,7 @@ var controller = {
             // Si todo es valido, sacando la id de la url
             var articleId = req.params.id;
 
+            if(articleId){
              // Buscar el articulo, asignarle el nombre de la img y actualizarlo
             Article.findOneAndUpdate({_id: articleId}, {image: file_name}, {new: true}, (err, articleUpdated) => {
                
@@ -276,7 +282,9 @@ var controller = {
                     article: articleUpdated
                 }); 
             });      
-        }          
+        } 
+        
+       } 
     }, //end upload file
 
     getImage: (req, res) => {
