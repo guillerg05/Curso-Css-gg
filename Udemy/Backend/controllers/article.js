@@ -85,7 +85,7 @@ var controller = {
         
     },
 
-    getArticles: (req, res) => {
+    getArticles: (req, res) =>{
         
         var query = Article.find({});
         
@@ -118,8 +118,9 @@ var controller = {
         });
     },
 
-    getArticle: (req,res) =>{
-        // Recoger el id de la URL
+     getArticle: (req, res) =>{
+
+        // Recoger el id de la url
         var articleId = req.params.id;
 
         // Comprobar que existe
@@ -127,26 +128,26 @@ var controller = {
             return res.status(404).send({
                 status: 'error',
                 message: 'No existe el articulo !!!'
-            });   
+            });
         }
 
         // Buscar el articulo
-        Article.findById(articleId, (err, article) => {
-           
+        Article.findById(articleId, (err, article) =>{
+            
             if(err || !article){
                 return res.status(404).send({
                     status: 'error',
                     message: 'No existe el articulo !!!'
-                });  
+                });
             }
+
             // Devolverlo en json
-       
-            return res.status(404).send({
+            return res.status(200).send({
                 status: 'success',
                 article
-            });   
+            });
 
-        });      
+        });
     },
 
     update: (req, res) =>{
@@ -267,25 +268,30 @@ var controller = {
             var articleId = req.params.id;
 
             if(articleId){
-             // Buscar el articulo, asignarle el nombre de la img y actualizarlo
-            Article.findOneAndUpdate({_id: articleId}, {image: file_name}, {new: true}, (err, articleUpdated) => {
-               
-                if(err || !articleUpdated){
+                // Buscar el articulo, asignarle el nombre de la imagen y actualizarlo
+                Article.findOneAndUpdate({_id: articleId}, {image: file_name}, {new:true}, (err, articleUpdated) => {
+
+                    if(err || !articleUpdated){
+                        return res.status(200).send({
+                            status: 'error',
+                            message: 'Error al guardar la imagen de articulo !!!'
+                        });
+                    }
+
                     return res.status(200).send({
-                        status: 'error',
-                        message: 'Error al guardar la imagen del articulo !!!'
-                    }); 
-                }
-                
+                        status: 'success',
+                        article: articleUpdated
+                    });
+                });
+             }else{
                 return res.status(200).send({
                     status: 'success',
-                    article: articleUpdated
-                }); 
-            });      
-        } 
-        
-       } 
-    }, //end upload file
+                    image: file_name
+                });
+             }
+            
+        }   
+    }, // end upload file
 
     getImage: (req, res) => {
         var file = req.params.image;

@@ -26,9 +26,10 @@ app.use((req, res, next) => {
     res.header('Allow', 'GET, POST, OPTIONS, PUT, DELETE');
     next();
 });
+
 // Añadir prefijos a rutas/cargar rutas
 
-app.use( '/api', article_routes);
+app.use('/api', article_routes);
 
 // Exportar modulo (fichero actual)
 
