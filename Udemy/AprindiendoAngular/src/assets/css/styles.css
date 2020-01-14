@@ -292,6 +292,10 @@ input[type="file"], textarea{
     margin-top: 15px !important;
 }
 
+.image-thumb img{
+    width: 150px;
+}
+
 .mid-form{
     width: 50%;
     margin: 0px auto;

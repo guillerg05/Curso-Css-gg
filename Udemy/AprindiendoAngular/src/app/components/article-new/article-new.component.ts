@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute, Params } from '@angular/router';
+import swal from 'sweetalert';
 import { Article } from '../../models/article';
 import { ArticleService } from '../../services/article.service';
 import { Global } from '../../services/global';
@@ -15,6 +16,7 @@ export class ArticleNewComponent implements OnInit {
 
   public article: Article;
   public status: string;
+  public page_title: string;
 
   afuConfig = {
     multiple: false,
@@ -44,6 +46,7 @@ export class ArticleNewComponent implements OnInit {
     private _articleService: ArticleService
   ) {
     this.article = new Article('', '', '', null, null);
+    this.page_title = 'Crear articulo';
   }
 
   ngOnInit() {
@@ -57,7 +60,15 @@ export class ArticleNewComponent implements OnInit {
           this.status = 'success';
           this.article = response.article;
           this._router.navigate(['/blog']);
+          
+          // Alerta!!
 
+          swal(
+            'Articulo creado',
+            'El articulo se ha creado correctamente',
+            'success'
+          );
+          
         } else {
           this.status = 'error';
         }
@@ -65,6 +76,11 @@ export class ArticleNewComponent implements OnInit {
       error => {
         console.log(error);
         this.status = 'error';
+        swal(
+          'Error',
+          'El articulo no se ha editado correctamente',
+          'error'
+        );
       }
     );
   }
