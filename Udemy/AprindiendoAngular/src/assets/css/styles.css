@@ -275,13 +275,21 @@ body{
     background: #444;
 }
 
-input[type="text"], textarea{
+input[type="text"],
+input[type="file"], textarea{
     width: 100%;
     min-height: 30px;
     border: 1px solid #eee;
     padding: 3px;
     margin-bottom: 5px;
     transition: 1000ms all;
+}
+
+.afu-attach-pin{
+    display: block !important;
+    width: 100% !important;
+    max-width: 90%R !important;
+    margin-top: 15px !important;
 }
 
 .mid-form{
